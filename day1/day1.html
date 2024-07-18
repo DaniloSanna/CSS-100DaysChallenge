@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS challenge - Day 1</title>
+</head>
+
+<style>
+	*{font-family: "Courier New", "Courier", sans-serif; margin: 0; padding: 0; color: white; text-transform: uppercase;}
+	.row{display: flex;}
+
+	section {justify-content: center; align-items: center; gap: 20px;}
+
+	.challenge{
+		width: 400px;
+		height: 400px;
+		position: relative;
+		background: linear-gradient(to top right, #43389F 0%, #4ec6ca 100%); 
+
+	}
+
+	.absolute-center{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.number{
+		position: relative;
+		margin-right: -15px;
+		box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+	}
+
+	.number-one{
+		z-index: 3;
+	}
+
+	.number-one-part1{
+		width: calc(55px / 2);
+		height: 105px;
+		background-color: white;
+		border-radius: 3px;
+		position: relative;
+		z-index: 3;
+	}
+
+	.number-one-part2{
+		content: '';
+		top: 0;
+		left: 0;
+		position: absolute;
+
+		width: calc(55px / 2.5);
+		height: calc(105px / 2.3);
+		background-color: rgb(245, 245, 245);
+		border-radius: 3px;
+
+		transform-origin: 1px 2px;
+		transform: rotate(45deg);
+		z-index: 1;
+	}
+
+	.number-zero{
+		border-radius: 50%;
+		border: 25px solid white;
+		width: 55px;
+		height: 55px;
+		background-color: transparent;
+		z-index: 1;
+	}
+
+	.number:nth-child(2){z-index: 2;}
+
+	p:first-of-type{
+		font-size: 80px;
+		font-weight: 600;
+		line-height: 65px;
+	}
+
+	p:nth-of-type(2){
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 24px;
+	}
+
+</style>
+
+<body>
+	<section class="row">
+		<div>
+			<h2 style="color: black;">Resolução: </h2>
+			<div class="challenge">
+				<div class="absolute-center">
+					<div class="row">
+						<div class="number number-one">
+							<div class="number-one-part1"></div>
+							<div class="number-one-part2"></div>
+						</div>
+						<div class="number number-zero"></div>
+						<div class="number number-zero"></div>
+					</div>
+
+					<div>
+						<p>DAYS</p>
+						<p>CSS CHALLENGE</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<a style="text-decoration: none;" href="https://100dayscss.com/days/1/" target="_blank">
+				<h2 style="color: black;">Exercício: </h2>
+				<img src="ex1.png">
+			</a>
+		</div>
+	</section>
+</body>
+</html>
